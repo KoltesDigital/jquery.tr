@@ -26,7 +26,9 @@ Simply include `jquery.cookie.js` before `jquery.tr.js` and that's it. With the 
 
 ### Designed to be used by CouchApps
 
-Last but not least, it has been designed with integration with CouchApps in mind. See the related [jquery.couch.tr](https://github.com/Bloutiouf/jquery.couch.tr) project. 
+Last but not least, it has been designed with integration with CouchApps in mind.
+
+See the related [jquery.couch.tr](https://github.com/Bloutiouf/jquery.couch.tr) project. 
 
 API
 -----
@@ -59,15 +61,15 @@ alert(tr('Hello world!'));
 Examples
 --------
 
-The [examples](https://github.com/Bloutiouf/jquery.tr/blob/master/examples/) directory contains some examples:
-* [event.html](https://github.com/Bloutiouf/jquery.tr/blob/master/examples/event.html) uses select's change event and cookies
-* [plurals.html](https://github.com/Bloutiouf/jquery.tr/blob/master/examples/plurals.html) translates a sentence into languages with different plural rules
-* [simple.html](https://github.com/Bloutiouf/jquery.tr/blob/master/examples/simple.html) is a basic example
-* [subdictionaries.html](https://github.com/Bloutiouf/jquery.tr/blob/master/examples/subdictionaries.html) uses sub-dictionaries
+The [examples](https://github.com/Bloutiouf/jquery.tr/blob/master/examples) directory contains some examples:
+ * [event.html](https://github.com/Bloutiouf/jquery.tr/blob/master/examples/event.html) uses select's change event and cookies
+ * [plurals.html](https://github.com/Bloutiouf/jquery.tr/blob/master/examples/plurals.html) translates a sentence into languages with different plural rules
+ * [simple.html](https://github.com/Bloutiouf/jquery.tr/blob/master/examples/simple.html) is a basic example
+ * [subdictionaries.html](https://github.com/Bloutiouf/jquery.tr/blob/master/examples/subdictionaries.html) uses sub-dictionaries
 
 Misc
 ----
 
-Licensed under a MIT license, see the (LICENSE file)[https://github.com/Bloutiouf/jquery.tr/blob/master/LICENSE].
+Licensed under a MIT license, see the [LICENSE file](https://github.com/Bloutiouf/jquery.tr/blob/master/LICENSE).
 
 Official repository: https://github.com/Bloutiouf/jquery.tr
