@@ -62,10 +62,11 @@ Examples
 --------
 
 The [examples](https://github.com/Bloutiouf/jquery.tr/blob/master/examples) directory contains some examples:
- * [event.html](https://github.com/Bloutiouf/jquery.tr/blob/master/examples/event.html) uses select's change event and cookies
- * [plurals.html](https://github.com/Bloutiouf/jquery.tr/blob/master/examples/plurals.html) translates a sentence into languages with different plural rules
- * [simple.html](https://github.com/Bloutiouf/jquery.tr/blob/master/examples/simple.html) is a basic example
- * [subdictionaries.html](https://github.com/Bloutiouf/jquery.tr/blob/master/examples/subdictionaries.html) uses sub-dictionaries
+
+* [event.html](https://github.com/Bloutiouf/jquery.tr/blob/master/examples/event.html) uses select's change event and cookies
+* [plurals.html](https://github.com/Bloutiouf/jquery.tr/blob/master/examples/plurals.html) translates a sentence into languages with different plural rules
+* [simple.html](https://github.com/Bloutiouf/jquery.tr/blob/master/examples/simple.html) is a basic example
+* [subdictionaries.html](https://github.com/Bloutiouf/jquery.tr/blob/master/examples/subdictionaries.html) uses sub-dictionaries
 
 Misc
 ----
