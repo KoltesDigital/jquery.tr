@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
+<script src="https://raw.github.com/carhartl/jquery-cookie/master/jquery.cookie.js"></script>
+<script src="../jquery.tr.js"></script>
+<script>
+/*
+ * This example shows that you can:
+ * - change the language on the fly.
+ */
+
+	var myDictionary = {
+		fr : {
+			'Welcome!' : 'Bienvenue !'
+		}
+	}
+	$.tr.dictionary(myDictionary);
+
+	$(document).ready(function() {
+		
+		// change the language
+		$('#language').change(function() {
+			$.tr.language($(this).val());
+			
+			var tr = $.tr.translator();
+			$('#welcome').text(tr('Welcome!'));
+		});
+		
+		// default language is English if no cookies present
+		var language = $.tr.language('en', true);
+		
+		$('#language').val(language);
+		$('#language').change();
+	});
+</script>
+</head>
+<body>
+	<div id="welcome"></div>
+	<form>
+		Language:
+		<select id="language">
+			<option value="en" selected="selected">English</option>
+			<option value="fr">Français</option>
+		</select>
+	</form>
+	<noscript>Enable Javascript.</noscript>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
+<script src="../jquery.tr.js"></script>
+<script>
+/*
+ * This example shows that you can:
+ * - use this plugin easily :)
+ */
+
+	// 1. Dictionary definition.
+	var myDictionary = {
+		fr : {
+			'Welcome &1!' : 'Bienvenue &1 !'
+		}
+	}
+	$.tr.dictionary(myDictionary);
+
+	// 2. Language selection.
+	$.tr.language('fr');
+
+	// 3. Use.
+	var tr = $.tr.translator();
+	alert(tr('Welcome &1!', 'John Doe'));
+</script>
+</head>
+<body>
+	<noscript>Enable Javascript.</noscript>
+</body>
+</html>

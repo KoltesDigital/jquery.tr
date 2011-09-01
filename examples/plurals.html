@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
+<script src="../jquery.tr.js"></script>
+<script>
+/*
+ * This example shows that you can:
+ * - have different rules to build plural forms.
+ * - use the replace function.
+ */
+
+	// two way to translate
+	var myDictionary = {
+		en : { // construct the strings manually
+			'You have &1 mail(s).' : function(args) {
+				if (args[1] == 1) {
+					return 'You have 1 mail.';
+				}
+				return 'You have ' + args[1] + ' mails.';
+			}
+		},
+		fr : { // or use the replace function
+			'You have &1 mail(s).' : function(args, replace) {
+				var text = (args[1] <= 1) ?
+					'Vous avez &1 message.' :
+					'Vous avez &1 messages.';
+				return replace(text, args[1]);
+			}
+		}
+	}
+	// set dictionary
+	$.tr.dictionary(myDictionary);
+
+	$(function() {
+		var languages = ['en', 'fr'];
+		var mails = [0, 1, 2];
+		
+		for (var l in languages) {
+			for (var m in mails) {
+				
+				// set language
+				$.tr.language(languages[l]);
+				
+				// get translator
+				var tr = $.tr.translator();
+				
+				// append the translated text
+				$('#data tbody').append('<tr>' +
+						'<td>' + languages[l] + '</td>' +
+						'<td>' + mails[m] + '</td>' +
+						'<td>' + tr('You have &1 mail(s).', mails[m]) + '</td>' +
+						'</tr>');
+			}
+		}
+	});
+</script>
+<style type="text/css">
+table {
+	border-collapse: collapse;
+}
+th, td {
+	padding: 5px;
+	border: 1px solid black;
+}
+</style>
+</head>
+<body>
+	<table id="data">
+		<thead>
+			<tr>
+				<th>Language</th>
+				<th>Mails</th>
+				<th>Result</th>
+			</tr>
+		</thead>
+		<tbody>
+		</tbody>
+	</table>
+	<noscript>Enable Javascript.</noscript>
+</body>
+</html>

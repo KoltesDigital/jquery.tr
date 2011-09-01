@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
+<script src="../jquery.tr.js"></script>
+<script>
+/*
+ * This example shows that you can:
+ * - have several level of hierarchy in your dictionary,
+ * - nest translations,
+ * - use named references in your texts to translate.
+ */
+
+	var myDictionary = {
+		'evently' : {
+			'account' : {
+				'_languages' : {
+					fr : {
+						'Admin party, everyone is admin!' : 'Admin party, tout le monde est admin !',
+						'Fix this in &1 before proceeding.' : 'Corrigez ça dans &1 avant de continuer.',
+						'Login' : 'Connexion',
+						'Logout?' : 'Déconnexion ?',
+						'Name' : 'Nom',
+						'Password' : 'Mot de passe',
+						'Signup' : 'Inscription',
+						'&signup or &login' : '&signup ou &login',
+						'Welcome &1!' : 'Bienvenue &1 !'
+					}
+				}
+			}
+		}
+	}
+	// set dictionary
+	$.tr.dictionary(myDictionary);
+	
+	$(function() {
+		
+		var languages = ['en', 'fr'];
+		
+		for (var l in languages) {
+			
+			// set language
+			$.tr.language(languages[l]);
+			
+			// get translator
+			var tr = $.tr.translator('evently', 'account', '_languages');
+			
+			$('#account').append('<div>' + languages[l] + ': ' + 
+				tr('&signup or &login', {
+					signup : '<a href="#signup">' + tr('Signup') + '</a>',
+					login : '<a href="#login">' + tr('Login') + '</a>'
+				}) + '</div>');
+		}
+	});
+</script>
+</head>
+<body>
+	<div id="account"></div>
+	<noscript>Enable Javascript.</noscript>
+</body>
+</html>
