@@ -14,6 +14,14 @@ Alternatively, you may give an other dictionary when calling `$.tr.translator` w
 
 You may also use a hierarchy of dictionaries, by giving the keys to `$.tr.transaltor`.  
 
+Note that you may still use AJAX to retrieve the dictionary, but the plugin itself does not rely on AJAX to translate (it's not its goal).
+
+```javascript
+$.getJSON('dictionary.php', function(data) {
+	$.tr.dictionary(data);
+});
+```
+
 ### Translates into languages with several plurals
 
 You can write generic sentences, but you may want to customize sentences involving numbers to be more grammatically correct. But some languages have up to six forms of plurals!
