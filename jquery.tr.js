@@ -33,12 +33,6 @@
 	 */
 	var cookieName = 'language';
 
-	/**
-	 * Name of the languagechange event.
-	 * Change it if it conflicts.
-	 */
-	var languagechange = 'languagechange';
-	
 	// end of configuration
 
 	/**
