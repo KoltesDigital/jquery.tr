@@ -76,6 +76,13 @@ The [examples](https://github.com/Bloutiouf/jquery.tr/blob/master/examples) dire
 * [simple.html](https://github.com/Bloutiouf/jquery.tr/blob/master/examples/simple.html) is a basic example
 * [subdictionaries.html](https://github.com/Bloutiouf/jquery.tr/blob/master/examples/subdictionaries.html) uses sub-dictionaries
 
+Changelog
+---------
+
+### 1.1
+
+Removes rest of a former event feature.
+
 Misc
 ----
 

@@ -3,7 +3,7 @@
  * @brief Support for internationalization.
  * @author Jonathan Giroux (Bloutiouf)
  * @site https://github.com/Bloutiouf/jquery.tr
- * @version 1.0
+ * @version 1.1
  * @license MIT license <http://www.opensource.org/licenses/MIT>
  * 
  * jquery.tr is a jQuery plugin which enables you to translate text on the
