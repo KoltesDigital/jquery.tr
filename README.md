@@ -28,9 +28,28 @@ You can write generic sentences, but you may want to customize sentences involvi
 
 By giving functions as dictionary's values, you can achieve this easily. The function has to return a string, used as the translated sentence. Because the function takes the parameters given to the translator, it should uses them to return different strings.
 
+### Replaces parameters in translations
+
+Because the order of words may change between languages, the use of parameters is necessary. A parameter is indicated by a `&` followed by an identifier in the sentences. Give an associative map as second argument to the translator function, which contains identifiers as keys and replacement texts as values.
+
+```javascript
+var tr = $.tr.translator();
+var status = tr('&object belongs to &category.', {
+	object: item.object,
+	category: categories[item.category].name
+});
+```
+
+Alternatively, if identifiers are numbers, you may give the values directly to the translator function. However, don't overuse this syntax: the lack of semantics make it hard to read and maintain.
+
+```javascript
+var tr = $.tr.translator();
+var greetings = tr('Hello &1!', name);
+```
+
 ### Uses cookie information if jQuery.cookie is available
 
-Simply include `jquery.cookie.js` before `jquery.tr.js` and that's it. With the cookie plugin, the langage will be automatically saved and restored.
+Simply include `jquery.cookie.js` before `jquery.tr.js` and that's it. With the cookie plugin, the language will be automatically saved and restored.
 
 ### Designed to be used by CouchApps
 
@@ -81,7 +100,7 @@ Changelog
 
 ### 1.1
 
-Removes rest of a former event feature.
+Removes rest of the former event feature.
 
 Misc
 ----

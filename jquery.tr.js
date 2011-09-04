@@ -12,6 +12,7 @@
  * Features:
  * - uses a predefined dictionary.
  * - translates into languages with several plurals.
+ * - replaces parameters in translations.
  * - uses cookie information if jQuery.cookie is available.
  * - designed to be used by CouchApps.
  */
