@@ -187,7 +187,7 @@
 			return function(key, opt) {
 				var value = lang[key];
 				var args = (typeof opt === 'object' && opt != null) ? opt : arguments;
-				if (typeof value === 'string') {
+				if (typeof value === 'string' && value !== '') {
 					return replace(value, args);
 				} else if (typeof value === 'function') {
 					return value(args, replace);
